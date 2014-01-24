@@ -8,7 +8,7 @@ object helloMacro {
     import Flag._
     val result = {
       annottees.map(_.tree).toList match {
-        case ModuleDef(mods, name, Template(parents, self, body)) :: Nil =>
+        case q"$mods object $name extends ..$parents { $self => ..$body }" :: Nil =>
           val helloMethod = DefDef(NoMods, newTermName("hello"), List(), List(List()), TypeTree(), Literal(Constant("hello")))
           ModuleDef(mods, name, Template(parents, self, body :+ helloMethod))
       }
