@@ -3,7 +3,7 @@ import Keys._
 
 object BuildSettings {
   val buildSettings = Defaults.defaultSettings ++ Seq(
-    organization := "org.scala-lang.macroparadise",
+    organization := "org.scalamacros",
     version := "1.0.0",
     scalacOptions ++= Seq(),
     scalaVersion := "2.10.3",
