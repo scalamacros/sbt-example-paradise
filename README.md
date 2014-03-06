@@ -1,4 +1,4 @@
-### An example SBT project which uses [macro paradise](http://docs.scala-lang.org/overviews/macros/paradise.html)
+### An example SBT project which uses [macro paradise](http://docs.scala-lang.org/overviews/macros/paradise.html) (Scala 2.10 with the macro paradise plugin, SBT 0.13)
 
 To verify that everything works fine, do `sbt run`.
 
