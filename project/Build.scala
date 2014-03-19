@@ -7,7 +7,7 @@ object BuildSettings {
     organization := "org.scalamacros",
     version := "1.0.0",
     scalacOptions ++= Seq(),
-    scalaVersion := "2.10.3",
+    scalaVersion := "2.10.4",
     resolvers += Resolver.sonatypeRepo("snapshots"),
     resolvers += Resolver.sonatypeRepo("releases"),
     addCompilerPlugin("org.scalamacros" % "paradise" % paradiseVersion cross CrossVersion.full)
