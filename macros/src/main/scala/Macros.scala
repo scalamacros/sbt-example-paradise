@@ -11,7 +11,7 @@ object helloMacro {
         case q"object $name extends ..$parents { ..$body }" :: Nil =>
           q"""
             object $name extends ..$parents {
-              def hello = "hello"
+              def hello: ${typeOf[String]} = "hello"
               ..$body
             }
           """
