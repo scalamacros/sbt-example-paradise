@@ -2,7 +2,7 @@ import sbt._
 import Keys._
 
 object BuildSettings {
-  val paradiseVersion = "2.0.0-M6"
+  val paradiseVersion = "2.0.0-M7"
   val buildSettings = Defaults.defaultSettings ++ Seq(
     organization := "org.scalamacros",
     version := "1.0.0",
@@ -10,7 +10,7 @@ object BuildSettings {
     scalaVersion := "2.10.4",
     resolvers += Resolver.sonatypeRepo("snapshots"),
     resolvers += Resolver.sonatypeRepo("releases"),
-    addCompilerPlugin("org.scalamacros" % "paradise" % paradiseVersion cross CrossVersion.full)
+    addCompilerPlugin("org.scalamacros" % "paradise" % paradiseVersion)
   )
 }
 
