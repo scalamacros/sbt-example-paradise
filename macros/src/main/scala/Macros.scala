@@ -1,9 +1,9 @@
-import scala.reflect.macros.Context
+import scala.reflect.macros.blackbox
 import scala.language.experimental.macros
 import scala.annotation.StaticAnnotation
 
 object helloMacro {
-  def impl(c: Context)(annottees: c.Expr[Any]*): c.Expr[Any] = {
+  def impl(c: blackbox.Context)(annottees: c.Expr[Any]*): c.Expr[Any] = {
     import c.universe._
     import Flag._
     val result = {
@@ -22,5 +22,5 @@ object helloMacro {
 }
 
 class hello extends StaticAnnotation {
-  def macroTransform(annottees: Any*) = macro helloMacro.impl
+  def macroTransform(annottees: Any*): Any = macro helloMacro.impl
 }
